@@ -6,11 +6,13 @@
     */
 
     //ENTRADA
-
+    let soma = 0;
 
     //PROCESSAMENTO
-
-
+    for (item = 1; item <= 5; item++) {
+        let numero = Number(prompt(`Informe o número ${item}`));
+        soma += numero
+    }
     //SAÍDA
-
+    document.write(`Soma: ${soma}<br>Média: ${soma / 5}`);
 </script>

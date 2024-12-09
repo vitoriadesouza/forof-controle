@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
-
-    
+    const inicial = Number(prompt(`Insira um número inicial:`));
+    const final = Number(prompt(`Insira um número final`));
+    let impares = [];
+    let pares = [];
     //PROCESSAMENTO
-
-    
-    //SAÍDA
+    if (inicial < final) {
+        for (let i = inicial; i <= final; i++) {
+            if (i % 2 != 0) {
+                impares.push(i);
+            } else {
+                pares.push(i);
+            }
+        }
+        document.write(`Números Ímpares: ${impares.join(", ")}<br>Números Pares: ${pares.join(", ")}`);
+    } else {
+        document.write(`Insira um valor inicial menor do que um número final`);
+    }
 
 </script>

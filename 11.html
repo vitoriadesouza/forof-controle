@@ -5,11 +5,16 @@
     */
 
     //ENTRADA
-
+    let soma = 0;
+    let multiplosTres = [];
 
     //PROCESSAMENTO
-
-
+    for (let item = 3; item <= 100; item++){
+        if ( item % 3 == 0){
+            soma += item
+            multiplosTres.push(item)
+        }
+    }
     //SAÍDA
-
+    document.write(`Números múltiplos de 3 (3 a 100): ${multiplosTres.join(", ")}<br> Soma desses números: ${soma}`)
 </script>

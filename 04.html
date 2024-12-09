@@ -5,12 +5,20 @@
     Faça um programa que apresente na tela os números ímpares de 1 até 50.
     */
 
-    //ENTRADA
-
+        //ENTRADA
+    let impares = [];
+    let pares = [];
 
     //PROCESSAMENTO
-
+    for (let item = 0; item <= 50; item++) {
+        if (item % 2 != 0) {
+            impares.push(item)
+        }
+        else {
+            pares.push(item)
+        }
+    }
 
     //SAÍDA
-
+    alert(`${impares}`);
 </script>

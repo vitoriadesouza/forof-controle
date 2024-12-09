@@ -8,11 +8,30 @@
     */
 
     //ENTRADA
-
-
+    const candidatoUm = prompt(`Insira o nome do candidato um`);
+    const candidatoDois= prompt(`Insira o nome do candidato dois`);
+    const candidatoTres = prompt(`Insira o nome do candidato três`);
+    const alunosVotantes = Number(prompt(`Insira o número de alunos na sala que irão votar:`));
+    let votosCand1 = 0;
+    let votosCand2 = 0;
+    let votosCand3 = 0;
     //PROCESSAMENTO
+    for (i = 1; i <= alunosVotantes; i++) {
+        let voto = Number(prompt(`Insira o número do candidato que você deseja votar: 
+        Candidato ${candidatoUm} (1)   Candidato ${candidatoDois} (2)    Candidato ${candidatoTres} (3)`));
 
+        if (voto == 1) {
+            votosCand1++
+        } else if (voto == 2) {
+            votosCand2++
+        } else {
+            votosCand3++
+        }
+    }
 
     //SAÍDA
-
+    document.write(`Votos no total: ${alunosVotantes}<br>
+     Votos no candidato ${candidatoUm}: ${votosCand1} (${votosCand1*100/alunosVotantes}%)<br>
+     Votos no candidato ${candidatoDois}: ${votosCand2} (${votosCand2*100/alunosVotantes}%)<br>
+     Votos no candidato ${candidatoTres}: ${votosCand3} (${votosCand3*100/alunosVotantes}%)`)
 </script>

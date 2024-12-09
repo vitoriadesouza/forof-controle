@@ -6,11 +6,19 @@
     */
 
     //ENTRADA
-
-    
+    let populacao = 50000;
+    let taxaAnualCrescimento = 0.015;
+    let anoCinco = populacao;
+    let anoDez = populacao;
+    let ano = 0;
     //PROCESSAMENTO
-    
+    for (ano = 1; ano<=5; ano++){
+        anoCinco += anoCinco * taxaAnualCrescimento
+    }
 
+    for(ano = 1; ano <=10; ano++){
+        anoDez += anoDez * taxaAnualCrescimento
+    }
     //SAÍDA
-
+    document.write(`Ano 5: ${Math.round(anoCinco)}<br>Ano 10: ${Math.round(anoDez)}`)
 </script>
