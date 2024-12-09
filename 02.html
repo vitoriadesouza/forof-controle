@@ -7,11 +7,14 @@
     */
 
     //ENTRADA
-    
-
+    let numeroNotas = Number(prompt("Quantas nota o aluno obteve?"));
+    let somaNotas = 0;
     //PROCESSAMENTO
-    
-
+    for (let nota = 0; nota < numeroNotas; nota++) {
+        let notaObtida = Number(prompt(`Nota obtida pelo aluno na prova ${nota + 1}`));
+        somaNotas = somaNotas + notaObtida;
+    }
+    const media = somaNotas / numeroNotas;
     //SAÍDA
-
+    alert(`A média da nota desse aluno é: ${media}`);
 </script>

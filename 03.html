@@ -7,11 +7,16 @@
     */
 
     //ENTRADA
-
+    let numero = [];
     
     //PROCESSAMENTO
-
-    
+    for(let i = 0; i < 5; i++) {
+        let numeroPrompt = Number(prompt(`Digite o ${i + 1}º número`))
+        numero.push(numeroPrompt);
+        alert(i)
+    }
+    document.write(`O maior numero ditado é: ${numero.sort((a, b) => b - a)[0]}`)
+    alert(numeroPrompt)
     //SAÍDA
 
 </script>
