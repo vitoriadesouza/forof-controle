@@ -5,11 +5,22 @@
     */
 
     //ENTRADA
-    
+    let investimentoInicial = 1000.00;
+    const meta = 2000.00;
+    const taxa = 0.02;
+    let dias = 0;
+    let diaAtual = 1;
+    let fimDeSemana = 0; 
 
     //PROCESSAMENTO
+    for( item = 1000; investimentoInicial <= meta; dias++){
+    diaAtual = (diaAtual + 1) % 7
 
-
-    //SAÍDA
-
+    if(diaAtual == 0 || diaAtual == 6){
+    fimDeSemana = fimDeSemana + 1
+    } else {
+       investimentoInicial += (investimentoInicial*taxa);
+   }
+  }
+  document.write(`Dias totais: ${dias} <br> Dias não úteis: ${fimDeSemana}<br> Dias úteis: ${dias - fimDeSemana}`)
 </script>
